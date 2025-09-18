@@ -1,4 +1,8 @@
 #!bin/bash
 
-echo "Hello World"
+VAR PERSON1=GANGU
+VAR PERSON2=SRAV
+
+echo "$PERSON1: Hello $PERSON2"
+echo "$PERSON2: HELLO $PERSON1"
 
