@@ -21,3 +21,5 @@ Status $? "MySql"
 dnf install python3 -y
 
 Status $? "Python"
+
+Status $? "Something"
