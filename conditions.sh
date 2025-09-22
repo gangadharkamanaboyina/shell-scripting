@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUM=$1
+read NUM
 
 if (( NUM % 2 == 0 )); then
    echo "$NUM is even"
