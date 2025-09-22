@@ -10,7 +10,7 @@ if (($? != 0)); then
    echo " $1 Installation failed"
    exit 1
 else
-   echo "$3 Installation Success"
+   echo "$2 Installation Success"
 fi
 }
 
@@ -22,4 +22,6 @@ dnf install python3 -y
 
 Status $? "Python"
 
-Status $? "Something"
+dnf install nginx -y
+
+Status $? "Nginx"
