@@ -1,7 +1,7 @@
 #!/bin/bash
 
-USERID=$(id -u)
+UID=$(id -u)
 
-if [ $USERID -ne 0 ]; then
+if [ $UID -ne 0 ]; then
    echo "Use root access"
 fi
