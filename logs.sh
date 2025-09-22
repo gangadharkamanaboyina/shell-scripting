@@ -6,8 +6,10 @@ if ((UID != 0)); then
    exit 1
 fi
 
-Log_Folder="mkdir /var/log/shell-scripting"
+Log_Folder="/var/log/shell-scripting"
 Log_File="$Log_Folder/install.log"
+
+mkdir -p $Log_Folder
 
 Status(){
     if (($1==0)); then
