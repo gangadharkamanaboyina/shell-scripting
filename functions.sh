@@ -16,8 +16,8 @@ fi
 
 dnf install mysql -y
 
-Status($1)
+Status "MySql"
 
 dnf install python3 -y
 
-Status($1)
+Status "Python"
