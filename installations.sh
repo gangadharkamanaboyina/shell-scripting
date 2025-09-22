@@ -2,7 +2,7 @@
 
 # UID=$(id -u)
 
-if [ (($UID != 0)) ]; then
+if  (($UID != 0)); then
    echo "Use root access"
 else 
     echo "Proceed with Installation"
