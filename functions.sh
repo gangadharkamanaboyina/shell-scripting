@@ -7,10 +7,10 @@ fi
 
 Status(){
 if (($1 != 0)); then
-   echo -e "\e[31m $2 Installation failed"
+   echo -e "\e[31m $2 Installation failed \e[0m"
    exit 1
 else
-   echo -e "\e[32m $2 Installation Success"
+   echo -e "\e[32m $2 Installation Success \e[0m"
 fi
 }
 
