@@ -8,13 +8,13 @@ fi
 Status(){
 if (($? != 0)); then
    echo "Installation failed"
-   #exit 1
+   exit 1
 else
    echo "Installation Success"
 fi
 }
 
-dnf install ysql -y
+dnf install mysql -y
 
 Status "MySql"
 
