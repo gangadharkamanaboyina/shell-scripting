@@ -1,20 +1,21 @@
 #!/bin/bash
 
 if ((UID != 0)); then
-   echo "Need root privilages to run the script"
+   echo -e "\e[31m Need root privilages to run the script \e[0m"
+   exit 1
 fi
 
 Status(){
     if (($1==0)); then
-        echo "$2 installed successfully"
+        echo -e "\e[32m $2 installed successfully \e[0m"
     else
-        echo "$2 installation failed"
+        echo -e "\e[31m $2 installation failed \e[0m"
     fi
 }
 dnf list installed nginx
 
    if(($?==0)); then
-       echo "Nginx already installed"
+       echo -e " \e[33m Nginx already installed  \e[0m"
     else
        dnf install nginx -y
        Status $? "Nginx"
