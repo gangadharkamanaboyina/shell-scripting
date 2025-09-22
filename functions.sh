@@ -8,20 +8,20 @@ fi
 Status(){
 if (($1 != 0)); then
    echo " $2 Installation failed"
-   exit 1
+   #exit 1
 else
    echo "$2 Installation Success"
 fi
 }
 
-dnf install mysql -y
+dnf install myql -y
 
 Status $? "MySql"
 
-dnf install python3 -y
+dnf install pyton3 -y
 
 Status $? "Python"
 
-dnf install nginx -y
+dnf install ngnx -y
 
 Status $? "Nginx"
