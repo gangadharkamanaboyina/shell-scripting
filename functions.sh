@@ -14,9 +14,15 @@ else
 fi
 }
 
-dnf install myql -y
+dnf list installed mysql
 
+if (($? == 0)); then
+
+   echo "MySql already installed"
+else
+dnf install mysql -y
 Status $? "MySql"
+fi
 
 dnf install python3 -y
 
