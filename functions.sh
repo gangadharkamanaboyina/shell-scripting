@@ -5,8 +5,6 @@ if ((UID != 0)); then
    exit 1
 fi
 
-dnf install mysql -y
-
 Status(){
 if (($? != 0)); then
    echo "Installation failed"
@@ -16,6 +14,10 @@ else
 fi
 }
 
+dnf install mysql -y
+
+Status
+
 dnf install python3 -y
 
-Status()
+Status
