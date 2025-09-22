@@ -24,5 +24,5 @@ dnf list installed nginx &>>$Log_File
        echo -e " \e[33m Nginx already installed  \e[0m"
     else
        dnf install nginx -y &>>$Log_File
-       Status $? "Nginx"    &>>$Log_File
+       Status $? "Nginx"   
     fi
