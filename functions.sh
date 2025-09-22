@@ -18,7 +18,7 @@ dnf list installed mysql
 
 if (($? == 0)); then
 
-   echo -e "\e[32m MySql already installed"
+   echo -e "\e[33m MySql already installed"
 else
 dnf install mysql -y
 Status $? "MySql"
