@@ -24,10 +24,20 @@ dnf install mysql -y
 Status $? "MySql"
 fi
 
+dnf list installed python3
+
+if(($? == 0)); then
+   echo "Python already installed"
+else
 dnf install python3 -y
-
 Status $? "Python"
+fi
 
+dnf list installed nginx
+
+if (($?==0)); then
+   echo "Nginx already installed"
+else
 dnf install nginx -y
-
 Status $? "Nginx"
+fi
