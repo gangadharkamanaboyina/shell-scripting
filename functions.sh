@@ -7,7 +7,7 @@ fi
 
 Status(){
 if (($1 != 0)); then
-   echo " $2 Installation failed"
+   echo " $1 Installation failed"
    #exit 1
 else
    echo "$2 Installation Success"
