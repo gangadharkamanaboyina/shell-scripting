@@ -2,6 +2,6 @@
 
 USERID=$(id -u)
 
-if [ (($USERID != 0)) ]; then
+if [ $USERID -ne 0 ]; then
    echo "Use root access"
 fi
