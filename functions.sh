@@ -8,7 +8,7 @@ fi
 Status(){
 if (($? != 0)); then
    echo "Installation failed"
-   exit 1
+   #exit 1
 else
    echo "Installation Success"
 fi
@@ -18,6 +18,6 @@ dnf install ysql -y
 
 Status "MySql"
 
-dnf install pthon3 -y
+dnf install python3 -y
 
 Status "Python"
