@@ -16,3 +16,23 @@ else
     echo "MySql Installation Failed"
     exit 1
 fi
+
+dnf install nginx -y
+
+if (($? == 0)); then
+   echo "Successfully Installed Nginx"
+   exit 0
+else
+    echo "Nginx Installation Failed"
+    exit 1
+fi
+
+dnf install python3 -y
+
+if (($? == 0)); then
+   echo "Successfully Installed Python"
+   exit 0
+else
+    echo "Python Installation Failed"
+    exit 1
+fi
