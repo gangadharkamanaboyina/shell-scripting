@@ -14,10 +14,10 @@ else
 fi
 }
 
-dnf install mysql -y
+dnf install ysql -y
 
 Status "MySql"
 
-dnf install python3 -y
+dnf install pthon3 -y
 
 Status "Python"
