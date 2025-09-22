@@ -18,7 +18,7 @@ dnf list installed mysql
 
 if (($? == 0)); then
 
-   echo "MySql already installed"
+   echo -e "\e[32m MySql already installed"
 else
 dnf install mysql -y
 Status $? "MySql"
@@ -27,7 +27,7 @@ fi
 dnf list installed python3
 
 if(($? == 0)); then
-   echo "Python already installed"
+   echo -e "\e[33m Python already installed"
 else
 dnf install python3 -y
 Status $? "Python"
@@ -36,7 +36,7 @@ fi
 dnf list installed nginx
 
 if (($?==0)); then
-   echo "Nginx already installed"
+   echo -e "\e[33m Nginx already installed"
 else
 dnf install nginx -y
 Status $? "Nginx"
