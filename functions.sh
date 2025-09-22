@@ -14,7 +14,7 @@ else
 fi
 }
 
-dnf install mysql -y
+dnf install myql -y
 
 Status $? "MySql"
 
