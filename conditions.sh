@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUM=$30
+NUM=$1
 
 if [ $NUM -lt 10 ]; then
     echo "$NUM is less than 10"
