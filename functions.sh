@@ -6,8 +6,8 @@ if ((UID != 0)); then
 fi
 
 Status(){
-if (($? != 0)); then
-   echo " $1 Installation failed"
+if (($1 != 0)); then
+   echo " $2 Installation failed"
    exit 1
 else
    echo "$2 Installation Success"
