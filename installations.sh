@@ -5,5 +5,5 @@
 if  (($UID != 0)); then
    echo "Use root access"
 else 
-    echo "Proceed with Installation"
+    dnf install mysql -y
 fi
