@@ -10,7 +10,7 @@ if (($? != 0)); then
    echo " $1 Installation failed"
    exit 1
 else
-   echo "$2 Installation Success"
+   echo "$1 Installation Success"
 fi
 }
 
