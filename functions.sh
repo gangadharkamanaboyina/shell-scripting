@@ -18,6 +18,6 @@ dnf install mysql -y
 
 Status
 
-dnf install python3 -y
+dnf install pyton3 -y
 
 Status
