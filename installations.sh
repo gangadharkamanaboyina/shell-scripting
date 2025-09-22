@@ -3,7 +3,13 @@
 # UID=$(id -u)
 
 if  (($UID != 0)); then
-   echo "Use root access"
-else 
-    dnf install mysql -y
+   echo "Use root access" 
+fi
+
+dnf install mysql -y
+
+if (($? == 0)); then
+   echo "Successfully Installed MySql"
+else
+    echo "MySql Installation Failed"
 fi
