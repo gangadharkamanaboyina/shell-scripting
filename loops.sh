@@ -1,6 +1,6 @@
 #!/bin/bash
 
-R=$\e[31m
+R=$(\e[31m)
 G=$\e[32m
 W=$\e[0m
 Y=$\e[33m
