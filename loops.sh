@@ -20,11 +20,13 @@ Validate(){
     fi
 }
 
-dnf list installed nginx
-if(($?!=0)); then
-  dnf install nginx -y
-  Validate $? "Nginx"
-else
-   echo -e "$Y Nginx already installed $W"
-fi
+for package in $@; do
 
+   dnf list installed $package
+     if(($?!=0)); then
+   dnf install $package -y
+   Validate $? "$package"
+     else
+       echo -e "$Y $package already installed $W"
+     fi
+done
