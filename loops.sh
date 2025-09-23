@@ -14,16 +14,16 @@ fi
 Validate(){
 
     if(($1==0)); then
-       echo -e "$G Installation Success $W"
+       echo -e "$G $2 Installation Success $W"
     else
-       echo -e "$R Installation Failed $W"
+       echo -e "$R $2 Installation Failed $W"
     fi
 }
 
-dnf list installed $2
+dnf list installed nginx
 if(($?!=0)); then
-  dnf install $2 -y
-  Validate $? "nginx"
+  dnf install nginx -y
+  Validate $? "Nginx"
 else
    echo -e "$Y Nginx already installed $W"
 fi
