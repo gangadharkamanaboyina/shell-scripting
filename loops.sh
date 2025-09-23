@@ -13,11 +13,11 @@ fi
 
 Validate(){
 
-if(($1==0)); then
-    echo -e "$G Installation Success $W"
-else
-    echo -e "$R Installation Failed $W"
-    
+    if(($1==0)); then
+       echo -e "$G Installation Success $W"
+    else
+       echo -e "$R Installation Failed $W"
+    fi
 }
 
 dnf list installed $2
