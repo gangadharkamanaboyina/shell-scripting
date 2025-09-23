@@ -11,9 +11,20 @@ if((UID!=0)); then
     exit 1
 fi
 
-dnf list installed nginx
+Validate(){
+
+if(($1==0)); then
+    echo -e "$G Installation Success $W"
+else
+    echo -e "$R Installation Failed $W"
+    
+}
+
+dnf list installed $2
 if(($?!=0)); then
-  dnf install nginx
+  dnf install $2 -y
+  Validate $? "nginx"
 else
    echo -e "$Y Nginx already installed $W"
 fi
+
