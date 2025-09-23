@@ -15,5 +15,5 @@ dnf list installed nginx
 if(($?!=0)); then
   dnf install nginx
 else
-   echo "$Y Nginx already installed $W"
+   echo -e "$Y Nginx already installed $W"
 fi
