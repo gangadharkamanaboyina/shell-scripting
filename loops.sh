@@ -23,8 +23,8 @@ Validate(){
 for package in $@; do
 
    dnf list installed $package
-     if(($?!=0)); then
-   dnf install $package -y
+     if(($?==0)); then
+   dnf remove $package -y
    Validate $? "$package"
      else
        echo -e "$Y $package already installed $W"
