@@ -16,3 +16,4 @@ if(($?!=0)); then
   dnf install nginx
 else
    echo "$Y Nginx already installed $W"
+fi
